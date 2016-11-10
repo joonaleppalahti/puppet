@@ -13,3 +13,8 @@
 
 * Installs MySQL
 * Sets root password as defined in site.pp
+
+## SSH
+
+* Installs SSH
+* Sets listening port to 5555

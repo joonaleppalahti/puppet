@@ -6,6 +6,7 @@ class apache {
 	
 	file { "/var/www/html/index.php":
 		content => template("apache/index.php"),
+		require => Package["apache2"],
 	}
 
 	file { "/var/www/html/index.html":

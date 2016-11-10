@@ -1,6 +1,6 @@
 # Puppet containing multiple modules
 
-## Apache
+## Apache and PHP
 
 * Installs Apache2
 * Changes default webpage
@@ -8,3 +8,8 @@
 * Enables PHP in main directory
 * Enables PHP in user directories
 * Adds public_html/index.php to /etc/skel
+
+## MySQL
+
+* Installs MySQL
+* Sets root password as defined in site.pp

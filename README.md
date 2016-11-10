@@ -18,7 +18,6 @@
 
 * Installs SSH
 * Sets listening port to 5555
-
 * Allow 5555/tcp
 * Allow 80/tcp
 * Allow 8140/tcp

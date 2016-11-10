@@ -10,6 +10,7 @@ class apache {
 
 	file { "/var/www/html/index.html":
 		ensure => "absent",
+		require => Package["apache2"],
 	}
 
 	file { "/etc/apache2/mods-enabled/userdir.conf":
@@ -38,6 +39,7 @@ class apache {
 
 	file { "/etc/skel/public_html/index.php":
 		content => template("apache/public_html/index.php"),
+		require => Package["apache2"],
 	}
 
 	service {"apache2":

@@ -2,7 +2,9 @@ class apache {
 	Package { ensure => "installed", allowcdrom => "true", }
 
 	package { apache2: }
-	package { libapache2-mod-php:}
+	package { libapache2-mod-php:
+		require => Package["apache2"],
+	}
 	
 	file { "/var/www/html/index.php":
 		content => template("apache/index.php"),

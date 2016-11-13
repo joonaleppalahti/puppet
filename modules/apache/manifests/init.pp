@@ -33,7 +33,7 @@ class apache {
 	file { "/etc/apache2/mods-available/php7.0.conf":
 		content => template("apache/php7.0.conf"),
 		require => Package["libapache2-mod-php"],
-		notify => Package["apache2"],
+		notify => Service["apache2"],
 	}
 
 	file { "/etc/skel/public_html":
